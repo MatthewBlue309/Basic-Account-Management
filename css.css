@@ -1,0 +1,253 @@
+* {
+   box-sizing: border-box;
+}
+#body {
+   background-color: black;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+#container {
+   max-width: 600px;
+}
+/* -----Login Page----- */
+/* Logo */
+#logo {
+   display: block;
+   text-align: center;
+   margin: 40px 0;
+   font-size: 40px;
+   font-family: "Courier New";
+   text-decoration: none;
+   color: white;
+}
+
+/* Input field */
+.input-container {
+   position: relative;
+   width: 250px;
+   margin-bottom: 5px;
+   margin: 5px auto;
+}
+.input-field {
+   width: 100%;
+   padding: 10px;
+   background: black;
+   border: 1px solid gray;
+   border-radius: 4px;
+   font-size: 16px;
+   color: white;
+}
+.input-label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  font-size: 16px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+  top: 7px;
+  left: 10px;
+  font-size: 12px;
+  color: gray;
+}
+
+/* Show Password Button */
+.show-password {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   background: none;
+   border: none;
+   color: white;
+   cursor: pointer;
+   font-size: 14px;
+}
+
+
+/* Submit Button */
+#submit-btn {
+   display: block;
+   width: 250px;
+   padding: 10px;
+   border-radius: 7px;
+   border: 0;
+   background-color: rgb(0, 162, 255);
+   color: white;
+   margin: 20px auto;
+   font-weight: bold;
+}
+
+/* Forgot password link */
+#forgot-password {
+   margin: 10px 0;
+   display: block;
+   text-align: center;
+   text-decoration: none;
+   color: aliceblue;
+   cursor: pointer;
+}
+
+/* "OR" line */
+.or-container {
+   max-width: 250px;
+   display: flex;
+   align-items: center;
+   margin: 20px auto;
+   color: gray;
+   font-size: 13px;
+}
+.or-line {
+   flex: 1;
+   height: 1px;
+   background-color: gray;
+}
+.or-text {
+   padding: 0 10px;
+}
+
+/* Sign-up link*/
+#sign-up {
+   cursor: pointer;
+   display: block;
+   font-size: 17px;
+   text-align: center;
+   text-decoration: none;
+   color: rgb(41, 176, 255);
+}
+
+
+/* -----Admin Page----- */
+#ad-body {
+   background-color: black;
+   color: white;
+}
+/* Intro */
+#ad-logo {
+   text-align: center;
+   font-size: 40px;
+   font-family: "Courier New";
+   text-decoration: none;
+   color: white;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: appearCenter 2s ease-in-out, moveUp 1s ease-in-out 1.5s forwards;
+}
+@keyframes appearCenter {
+   from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes moveUp {
+   from { top: 50%; } to { top: 10%; }
+}
+
+#line-follow {
+   position: absolute;
+   background-color: white;
+   border: 0;
+   top: 50%;
+   left: 50%;
+   width: 2px;
+   height: 0px;
+   animation: lineUp 1.5s ease-in-out 2s forwards, expandLine 1.5s ease-in-out 3.5s forwards;
+}
+
+@keyframes lineUp {
+   from { 
+      top: 56%; 
+      height: 0px; 
+      border: 0;
+      background-color: white;
+      opacity: 0; 
+   }
+   to { 
+      top:28%; 
+      height: 450px;
+      border: 2px solid white;
+      background-color: black;
+      opacity: 1; }
+}
+@keyframes expandLine {
+   from {
+      left: 50%;
+      width: 2px; 
+   } to {
+      left: 5%;
+      width : 90%;
+   } 
+}
+
+#acc-table {
+   position: absolute;
+   top: 28%;
+   left: 5%;
+   width: 90%;
+   opacity: 0;
+   border-collapse: collapse;
+   background-color: black;
+   color: white;
+   animation: showTable 1.5s ease-in-out 5s forwards;
+}
+#acc-table th, #acc-table td {
+   border: 1px solid white;
+   padding: 10px;
+   text-align: center;
+}
+
+@keyframes showTable {
+   from {opacity: 0;} to {opacity: 1;}
+}
+
+
+/* -----Client Page----- */
+.welcome {
+   text-align: center;
+}
+
+#add-2fa {
+   text-align: center;
+   cursor: pointer;
+   color: rgb(41, 176, 255);
+}
+
+/* -----OTP Field----- */
+.otp-container {
+   border: 1px solid grey;
+   display: flex;
+   width: 260px;
+   margin: auto;
+   
+}
+.otp-input {
+   background-color: black;
+   margin: 5px 2px;
+   width: 39px;
+   height: 25px;
+   font-size: 15px;
+   text-align: center;
+   border: none;
+   border-bottom: 2px solid white;
+   outline: none;
+   color: white;
+}
+#otpMessage {
+   text-align: center;
+}
+
+#errorMessage {
+   color: rgba(255, 52, 52, 0.76);
+   margin-top: 2px;
+}
+
+#logout {
+   cursor: pointer;
+   color: rgb(41, 176, 255);
+}

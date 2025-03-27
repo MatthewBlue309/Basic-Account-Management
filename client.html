@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Account Management</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" type="image/x-icon" href="\images\icon.ico">
+   <link rel="stylesheet" href="css.css">
+   <script src="handler.js"></script>
+</head>
+<body id="body">
+   <form id="client">
+      <a id="logo" href="">Account<br>Management</a>
+      <h2 class="welcome">Welcome '<span id="e"></span>' to websit account management by <br><br>  Hoang Minh Thang <br>&<br> Nguyen Minh Duc</h3>
+      <p class="welcome">Your account does not have 2FA</p>
+      <p id="add-2fa" onclick="toggleAdd2FA()">Wanna add?</p>
+      <p class="welcome" id="logout" name="logout" onclick="logOut()">Log out</p>
+   </form>
+</body>
+</html>

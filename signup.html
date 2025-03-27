@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign up</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="icon" type="image/x-icon" href="\images\icon.ico">
+   <link rel="stylesheet" href="css.css">
+   <script src="handler.js"></script>
+</head>
+<body id="body">
+   <form id="signup-form" class="container" action="server.php" method="post" novalidate>
+      <input type="hidden" name="form-type" value="signup">  <!-- For the server to recognize what form is this -->
+      <a id="logo" href="">Account<br>Management</a>
+      
+      <div class="input-container">
+         <input type="text" id="name" class="input-field" name="name" placeholder=" " required>
+         <label for="fname" class="input-label">Full name</label>
+      </div>
+      <div class="input-container">
+         <input type="text" id="username" class="input-field" name="username" placeholder=" " required>
+         <label for="username" class="input-label">Username</label>
+      </div>
+      <div class="input-container">
+         <input type="email" id="email" class="input-field" name="email" placeholder=" " required>
+         <label for="email" class="input-label">Email address or mobile number</label>
+      </div>
+      <div class="input-container">
+         <input type="text" id="pass" class="input-field" name="pass" placeholder=" " required>
+         <label for="pass" class="input-label">Password</label>
+      </div>
+      <div id="errorMessage" style="display: none"></div>
+
+      <button id="submit-btn" type="submit">Sign up</button>
+      
+      
+      <div class="or-container">
+         <div class="or-line"></div>
+         <div class="or-text">OR</div>
+         <div class="or-line"></div>
+      </div>
+
+      <a id="sign-up" href="login.php">Log in</p>
+   </form>
+</body>
+</html>
